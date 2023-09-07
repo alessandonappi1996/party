@@ -1,2 +1,38 @@
 <p>add-party works!</p>
+<form class="form" [formGroup]="form" (ngSubmit)="addSerata()">
+    
+    <div class="flex">
+        <label>
+            <input class="input" type="text" placeholder="" required="" formControlName="nomeSerata">
+            <span></span>
+        </label>
+
+        <!-- <label>
+            <input class="input" type="text" placeholder="" required="">
+            <span>last name</span>
+        </label>
+    </div>  
+            
+    <label>
+        <input class="input" type="email" placeholder="" required="">
+        <span>email</span>
+    </label> 
+        
+    <label>
+        <input class="input" placeholder="" type="tel" required="">
+        <span>contact number</span>
+    </label>
+    <label>
+        <textarea class="input01" placeholder="" rows="3" required=""></textarea>
+        <span>message</span>
+    </label> -->
+    
+    <button type='submit' href="#" class="fancy">
+      <span class="top-key"></span>
+      <span class="text">submit</span>
+      <span class="bottom-key-1"></span>
+      <span class="bottom-key-2"></span>
+    </button>
+    </div>
+</form>
 <button (click)="goToBack()" >Indietro</button>
