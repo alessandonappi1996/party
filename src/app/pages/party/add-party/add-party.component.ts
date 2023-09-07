@@ -26,15 +26,21 @@ private fireBaseSrv : PartyService
 
 ngOnInit (): void{
 this.form = this.fb.group ({
-  nomeSerata: ['']
+  nomeSerata: [''] , 
+  durata : ['']
 })
 }
 
 addSerata(){
   this.fireBaseSrv.addParty(this.form.value).subscribe(data=>{
     console.log(data);
+    console.log(this.form.value);
     
   })
+  setTimeout(() => {
+    this.router.navigate(['/party'])
+  }, 500);
+  
   
 }
 

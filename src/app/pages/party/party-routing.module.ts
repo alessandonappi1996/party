@@ -4,14 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { PartyComponent } from './party.component';
 import { AddPartyComponent } from './add-party/add-party.component';
 import { EditPartyComponent } from './edit-party/edit-party.component';
-
+// import { EditPartyComponent } from './edit-party/edit-party.component';
 const routes : Routes = [
 
 
   {
       path:'',
       data: {
-        title: 'tipologiaa',
+        title: 'partyyyy',
       },
       children: [
           {
@@ -33,7 +33,6 @@ const routes : Routes = [
           //   role:['USER_ADMIN', 'superuser'],
           }
         },
-
         {
           path:'edit-party/:id',
           component: EditPartyComponent,
@@ -43,6 +42,16 @@ const routes : Routes = [
           //   role:['USER_ADMIN', 'superuser'],
           }
         },
+
+        // {
+        //   path:'edit-party/:id',
+        //   component: EditPartyComponent,
+        //   // canActivate:[AuthGuard],
+        //   data: {
+        //     title: 'Modifica Serata',
+        //   //   role:['USER_ADMIN', 'superuser'],
+        //   }
+        // },
 
 
 ]

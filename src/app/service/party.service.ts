@@ -19,6 +19,22 @@ export class PartyService {
     return this.http.post<any>(`${environment.apiUrl}/party.json`, party)
 
   }
+
+  getParty(){
+    return this.http.get<any>(`${environment.apiUrl}/party.json`)
+  }
+
+  deleteParty(id:any){
+return this.http.delete<any>(`${environment.apiUrl}/party/${id}.json` )
+  }
+
+  editParty(id:any , party:any){
+    return this.http.put<any>(`${environment.apiUrl}/party/${id}.json` , party)
+  }
+
+  getPartyById(id: any){
+    return this.http.get<any>(`${environment.apiUrl}/party/${id}.json`)
+  }
 }
 
 
