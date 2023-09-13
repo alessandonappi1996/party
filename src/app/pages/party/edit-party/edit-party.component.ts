@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { PartyService } from 'src/app/service/party.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit-party',
@@ -42,14 +43,28 @@ this.fireBaseSrv.getPartyById(this.idParty).subscribe(data=>{
 }
 
 editSerata(){
-this.fireBaseSrv.editParty(this.idParty , this.form.value).subscribe(data=>{
-console.log(data);
 
+  Swal.fire({
+    title: 'Do you want to save the changes?',
+    showDenyButton: true,
+    // showCancelButton: true,
+    confirmButtonText: 'Conferma',
+    denyButtonText: `Indietro`,
+  }).then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+    if (result.isConfirmed) {
+      this.fireBaseSrv.editParty(this.idParty , this.form.value).subscribe(data=>{
+        console.log(data);
+        setTimeout(() => {
+          this.router.navigate(['/party'])
+        }, 500);
+      Swal.fire('Modifica effettuata!', '', 'success')
+        
+        })
+        
+    } 
+  })
 
-})
-setTimeout(() => {
-  this.router.navigate(['/party'])
-}, 500);
 }
 
 goToBack(){

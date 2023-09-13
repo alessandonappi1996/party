@@ -24,9 +24,10 @@
           class="fa fa-search"></i></a>
     </div>
   </div>
-<form class="form" [formGroup]="form" (ngSubmit)="addSerata()">
+  <div >
+<form  style="margin-left: 40%;" class="form mt-6" [formGroup]="form" (ngSubmit)="addSerata()">
     
-    <div class="flex">
+    <div class="flex ">
         <label>
             <input class="input" type="text" placeholder="Party" required="" formControlName="nomeSerata">
             <span></span>
@@ -70,4 +71,6 @@
     <span class="bottom-key-2"></span>
   </button>
 </form>
-<button (click)="goToBack()" >Indietro</button>
+  </div>
+<button (click)="goToBack()" class="w3-button w3-black w3-section w3-right" >Indietro</button>
+

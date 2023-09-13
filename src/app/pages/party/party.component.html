@@ -235,7 +235,7 @@
                            ">
                       {{partino.durata}}
                     </td>
-                    <td class="
+                    <!-- <td class="
                            text-center text-dark
                            font-medium
                            text-base
@@ -247,6 +247,74 @@
                            ">
                       <button (click)="deleteParty(partino.id)" class="bg-warning">Elimina</button>
                     </td>
+                    <td class="
+                           text-center text-dark
+                           font-medium
+                           text-base
+                           py-5
+                           px-2
+                           bg-white
+                           
+                           border-b border-r border-[#E8E8E8]
+                           ">
+                      <button (click)="goToEdit(partino.id)" class="bg-warning">Modifica</button>
+                    </td> -->
+
+
+                    <td class="
+                    text-center text-dark
+                    font-medium
+                    text-base
+                    py-5
+                    px-2
+                    bg-white
+                    
+                    border-b border-r border-[#E8E8E8]
+                    ">
+                    <div
+                    class='from-teal-100 via-teal-300 to-teal-500 bg-gradient-to-br  flex justify-center items-center'>
+                    <div class='absolute '>
+                      <button  (click)="closeDrop()" class="bg-sky-600 p-2 font-bold text-gray-100 rounded-md peer focus:bg-sky-400 focus:text-gray-200 transition-all duration-200  "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                      </svg>
+                      </button>
+                      <div  class=' w-80 absolute top-5 z-10
+                      after:content-[""] after:inline-block after:absolute after:top-0 after:bg-white/40
+                      after:w-full after:h-full after:-z-20 after:blur-[2px] after:rounded-lg
+                      peer-focus:top-12 peer-focus:opacity-100 peer-focus:visible 
+                      transition-all duration-300 invisible  opacity-0 
+                      '>
+                        <ul  class='py-6 px-3 flex flex-col gap-3'>
+                          <li class='cursor-pointer bg-blue-300 p-3 rounded-md hover:opacity-90 text-white' (click)="goToEdit(partino.id)">Modifica</li>
+                          <li class='cursor-pointer bg-red-300 p-3 rounded-md hover:opacity-90 text-white' (click)="deleteParty(partino.id)">Elimina</li>
+                          <!-- <li class='cursor-pointer bg-cyan-300 p-3 rounded-md hover:opacity-90 text-white'>Eat an apple a day</li>
+                          <li class='cursor-pointer bg-red-300 p-3 rounded-md hover:opacity-90 text-white'>Eat an apple a day</li>
+                          <li class='cursor-pointer bg-yellow-300 p-3 rounded-md hover:opacity-90 text-white'>Eat an apple a day</li> -->
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                    </td>
+                    <script>let dropdown = document.getElementById("dropdown");
+                      let open1 = document.getElementById("open");
+                      let close1 = document.getElementById("close");
+                      
+                      let flag = false;
+                      const dropdownHandler = () => {
+                        if (!flag) {
+                          dropdown.classList.add("hidden");
+                          open1.classList.add("hidden");
+                          close1.classList.remove("hidden");
+                          flag = true;
+                        } else {
+                          dropdown.classList.remove("hidden");
+                          close1.classList.add("hidden");
+                          open1.classList.remove("hidden");
+                          flag = false;
+                        }
+                      };
+                      
+</script>
                     <!-- <td class="
                            text-center text-dark
                            font-medium
