@@ -32,17 +32,24 @@ this.idParty = this.route.snapshot.paramMap.get('id');
 this.getPartySingolo()
 }
 
-getPartySingolo(){ //qua non mettiamo id nella parentesi tonda mmm
+getPartySingolo(){ //qua non mettiamo id nella parentesi tonda , quando si fa mmm
 this.fireBaseSrv.getPartyById(this.idParty).subscribe(data=>{
   console.log(data);
 
-  this.form.patchValue(data)   //vedi se vabene metterlo qui nel metodo di getbyid invece di farne uno a parte come in cityreport mmm
+  this.form.patchValue(data)                                       //vedi se vabene metterlo qui nel metodo di getbyid invece di farne uno a parte come in cityreport mmm
   
 })
 }
 
 editSerata(){
+this.fireBaseSrv.editParty(this.idParty , this.form.value).subscribe(data=>{
+console.log(data);
 
+
+})
+setTimeout(() => {
+  this.router.navigate(['/party'])
+}, 500);
 }
 
 goToBack(){
