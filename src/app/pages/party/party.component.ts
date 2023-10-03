@@ -28,7 +28,7 @@ this.getParty()
 arrProva : any = []
 getParty(){
   this.fireBaseSrv.getParty().subscribe(data=>{
-    console.log(data);
+    console.log(data , 'getparty');
 
 this.arrProva.push(data)
 
@@ -39,7 +39,7 @@ this.partys = Object.keys(data).map((key)=>{
   data[key]['id']= key
   return data[key]})
     
-    console.log(this.partys);
+    console.log(this.partys , 'getpartys con key');
     
     
   })
@@ -100,6 +100,9 @@ closeDrop(){
  
 }
 
+goToRegistraz(){
+  this.router.navigate(['/registrazione'])
+}
 
 
 }

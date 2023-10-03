@@ -295,7 +295,7 @@
                     </div>
                   </div>
                     </td>
-                    <script>let dropdown = document.getElementById("dropdown");
+                    <!-- <script>let dropdown = document.getElementById("dropdown");
                       let open1 = document.getElementById("open");
                       let close1 = document.getElementById("close");
                       
@@ -314,7 +314,7 @@
                         }
                       };
                       
-</script>
+</script> -->
                     <!-- <td class="
                            text-center text-dark
                            font-medium
@@ -553,7 +553,7 @@
             <div class="wrapper bg-white rounded shadow w-full ">
               <div class="header flex justify-between border-b p-2">
                 <span class="text-lg font-bold ">
-                  2020 July
+                  2023
                 </span>
                 <div class="buttons">
                   <button class="p-1">
@@ -617,14 +617,14 @@
                     <td
                       class="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-auto transition cursor-pointer duration-500 ease hover:bg-gray-300 ">
                       <div
-                        class="flex flex-col h-40 mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
-                        <div class="top h-5 w-full">
+                        class="flex flex-col mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
+                        <!-- <div class="top h-5 w-full">
                           <span class="text-gray-500">1</span>
-                        </div>
-                        <div class="bottom flex-grow h-30 py-1 w-full cursor-pointer">
+                        </div> -->
+                        <div *ngFor="let partino of partys" class="bottom flex-grow h-30 py-1 w-full cursor-pointer">
                           <div class="event bg-purple-400 text-white rounded p-1 text-sm mb-1">
                             <span class="event-name">
-                              Meeting
+                              {{partino.nomeSerata}}
                             </span>
                             <span class="time">
                               12:00~14:00
@@ -645,9 +645,7 @@
                       class="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-auto transition cursor-pointer duration-500 ease hover:bg-gray-300">
                       <div
                         class="flex flex-col h-40 mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
-                        <div class="top h-5 w-full">
-                          <span class="text-gray-500">2</span>
-                        </div>
+                        
                         <div class="bottom flex-grow h-30 py-1 w-full cursor-pointer"></div>
                       </div>
                     </td>
@@ -655,9 +653,7 @@
                       class="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-auto transition cursor-pointer duration-500 ease hover:bg-gray-300">
                       <div
                         class="flex flex-col h-40 mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
-                        <div class="top h-5 w-full">
-                          <span class="text-gray-500">3</span>
-                        </div>
+                        
                         <div class="bottom flex-grow h-30 py-1 w-full cursor-pointer"></div>
                       </div>
                     </td>
@@ -665,9 +661,7 @@
                       class="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-auto transition cursor-pointer duration-500 ease hover:bg-gray-300">
                       <div
                         class="flex flex-col h-40 mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
-                        <div class="top h-5 w-full">
-                          <span class="text-gray-500">4</span>
-                        </div>
+                        
                         <div class="bottom flex-grow h-30 py-1 w-full cursor-pointer"></div>
                       </div>
                     </td>
@@ -675,9 +669,7 @@
                       class="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-auto transition cursor-pointer duration-500 ease hover:bg-gray-300">
                       <div
                         class="flex flex-col h-40 mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
-                        <div class="top h-5 w-full">
-                          <span class="text-gray-500">6</span>
-                        </div>
+                        
                         <div class="bottom flex-grow h-30 py-1 w-full cursor-pointer"></div>
                       </div>
                     </td>
@@ -685,9 +677,7 @@
                       class="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-hidden transition cursor-pointer duration-500 ease hover:bg-gray-300">
                       <div
                         class="flex flex-col h-40 mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
-                        <div class="top h-5 w-full">
-                          <span class="text-gray-500">7</span>
-                        </div>
+                        
                         <div class="bottom flex-grow h-30 py-1 w-full cursor-pointer">
                           <div class="event bg-blue-400 text-white rounded p-1 text-sm mb-1">
                             <span class="event-name">
@@ -704,15 +694,13 @@
                       class="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-auto transition cursor-pointer duration-500 ease hover:bg-gray-300">
                       <div
                         class="flex flex-col h-40 mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
-                        <div class="top h-5 w-full">
-                          <span class="text-gray-500 text-sm">8</span>
-                        </div>
+                        
                         <div class="bottom flex-grow h-30 py-1 w-full cursor-pointer"></div>
                       </div>
                     </td>
                   </tr>
 
-                  <!--         line 1 -->
+                          <!-- line 1
                   <tr class="text-center h-20">
                     <td
                       class="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-auto transition cursor-pointer duration-500 ease hover:bg-gray-300">
@@ -785,9 +773,9 @@
                       </div>
                     </td>
                   </tr>
-                  <!--         line 1 -->
+                          line 1
 
-                  <!--         line 2 -->
+                          line 2
                   <tr class="text-center h-20">
                     <td
                       class="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-auto transition cursor-pointer duration-500 ease hover:bg-gray-300">
@@ -860,9 +848,9 @@
                       </div>
                     </td>
                   </tr>
-                  <!--         line 2 -->
+                          line 2
 
-                  <!--         line 3 -->
+                          line 3
                   <tr class="text-center h-20">
                     <td
                       class="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-auto transition cursor-pointer duration-500 ease hover:bg-gray-300">
@@ -935,9 +923,9 @@
                       </div>
                     </td>
                   </tr>
-                  <!--         line 3 -->
+                          line 3
 
-                  <!--         line 4 -->
+                          line 4
                   <tr class="text-center h-20">
                     <td
                       class="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-auto transition cursor-pointer duration-500 ease hover:bg-gray-300">
@@ -1010,7 +998,7 @@
                       </div>
                     </td>
                   </tr>
-                  <!--         line 4 -->
+                          line 4 -->
                 </tbody>
               </table>
             </div>

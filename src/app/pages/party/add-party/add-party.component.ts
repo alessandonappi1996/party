@@ -28,7 +28,8 @@ private fireBaseSrv : PartyService
 ngOnInit (): void{
 this.form = this.fb.group ({
   nomeSerata: [''] , 
-  durata : ['']
+  durata : [''], 
+  giorno : ['']
 })
 }
 

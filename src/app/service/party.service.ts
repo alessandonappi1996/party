@@ -35,6 +35,10 @@ return this.http.delete<any>(`${environment.apiUrl}/party/${id}.json` )
   getPartyById(id: any){
     return this.http.get<any>(`${environment.apiUrl}/party/${id}.json`)
   }
+
+  addUtente(utente: any){
+    return this.http.post<any>(`${environment.apiUrl}/utente.json`, utente)
+  }
 }
 
 

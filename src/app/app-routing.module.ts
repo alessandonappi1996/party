@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PartyComponent } from './pages/party/party.component';
+import { RegistrazioneComponent } from './pages/registrazione/registrazione.component';
+
 
 const routes: Routes = [
   {
@@ -19,6 +21,7 @@ const routes: Routes = [
   loadChildren: () =>
     import('./pages/party/party.module').then((m) => m.PartyModule)
   },
+  { path: 'registrazione' , component: RegistrazioneComponent},
 ];
 
 @NgModule({
