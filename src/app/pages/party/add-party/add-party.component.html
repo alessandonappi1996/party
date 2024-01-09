@@ -56,19 +56,50 @@
     
 </div>
 
-<div class="flex">
+<!-- <div class="flex">
     <label>
-        <input class="input" type="text" placeholder="Durata" required="" formControlName="durata">
+        <input class="input" type='time' step="3600" placeholder="Durata" required="" formControlName="durata">
         <span></span>
     </label>
 
   
+</div> -->
+
+<div class="flex">
+  <label>
+      <input class="input"  step="3600" placeholder="Ora Inizio" required="" formControlName="oraInizio" 
+      onfocus="(this.type='time')"
+    onblur="(this.type='text')"
+    id="time">
+      <span></span>
+  </label>
+
+
 </div>
 
 <div class="flex">
   <label>
-      <input class="input" type="text" placeholder="Giorno" required="" formControlName="giorno">
+      <input class="input" step="3600" placeholder="Ora Fine" required="" formControlName="oraFine"
+      onfocus="(this.type='time')"
+    onblur="(this.type='text')"
+    id="time">
       <span></span>
+  </label>
+
+
+</div>
+
+<div class="flex">
+  <label>
+      <!-- <input class="input" type="text" placeholder="Giorno" required="" formControlName="giorno">
+      <span></span> -->
+
+      <select formControlName="giorno" class="input" aria-label="Default select example">
+        <option disabled selected value='' >Giorno</option>
+        <option  *ngFor="let sett of settimana">{{sett.giornoS}}</option>
+        <!-- <option value="2">Two</option>
+        <option value="3">Three</option> -->
+      </select>
   </label>
 
 

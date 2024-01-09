@@ -14,7 +14,29 @@ import Swal from 'sweetalert2'
 export class AddPartyComponent {
 
   form!: FormGroup;
-
+public settimana = [
+  {
+giornoS : 'Lunedì'
+  },
+  {
+    giornoS : 'Martedì'
+  },
+  {
+    giornoS : 'Mercoledì'
+  },
+  {
+    giornoS : 'Giovedì'
+  },
+  {
+    giornoS : 'Venerdì'
+  },
+  {
+    giornoS : 'Sabato'
+  },
+  {
+    giornoS : 'Domenica'
+  }
+]
 
 constructor(
 private location : Location , 
@@ -28,7 +50,9 @@ private fireBaseSrv : PartyService
 ngOnInit (): void{
 this.form = this.fb.group ({
   nomeSerata: [''] , 
-  durata : [''], 
+  oraInizio : [''],
+  oraFine : [''],
+  // durata : [''], 
   giorno : ['']
 })
 }

@@ -141,7 +141,7 @@
                            px-3
                            lg:px-4
                            ">
-                      Durata
+                      Orario
                     </th>
                     <th class="
                            w-1/6
@@ -233,7 +233,7 @@
                            bg-white
                            border-b border-[#E8E8E8]
                            ">
-                      {{partino.durata}}
+                      {{partino.oraInizio}} - {{partino.oraFine}}
                     </td>
                     <!-- <td class="
                            text-center text-dark
@@ -622,20 +622,12 @@
                           <span class="text-gray-500">1</span>
                         </div> -->
                         <div *ngFor="let partino of partys" class="bottom flex-grow h-30 py-1 w-full cursor-pointer">
-                          <div class="event bg-purple-400 text-white rounded p-1 text-sm mb-1">
-                            <span class="event-name">
+                          <div *ngIf="partino.giorno == 'Lunedì' " class="event bg-purple-400 text-white rounded p-1 text-sm mb-1">
+                            <span  class="event-name">
                               {{partino.nomeSerata}}
                             </span>
                             <span class="time">
-                              12:00~14:00
-                            </span>
-                          </div>
-                          <div class="event bg-purple-400 text-white rounded p-1 text-sm mb-1">
-                            <span class="event-name">
-                              Meeting
-                            </span>
-                            <span class="time">
-                              18:00~20:00
+                              {{partino.oraInizio}} ~ {{partino.oraFine}}
                             </span>
                           </div>
                         </div>
@@ -644,47 +636,93 @@
                     <td
                       class="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-auto transition cursor-pointer duration-500 ease hover:bg-gray-300">
                       <div
-                        class="flex flex-col h-40 mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
-                        
-                        <div class="bottom flex-grow h-30 py-1 w-full cursor-pointer"></div>
+                        class="flex flex-col mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
+                        <!-- <div class="top h-5 w-full">
+                          <span class="text-gray-500">1</span>
+                        </div> -->
+                        <div *ngFor="let partino of partys" class="bottom flex-grow h-30 py-1 w-full cursor-pointer">
+                          <div *ngIf="partino.giorno == 'Martedì' " class="event bg-purple-400 text-white rounded p-1 text-sm mb-1">
+                            <span  class="event-name">
+                              {{partino.nomeSerata}}
+                            </span>
+                            <span class="time">
+                              {{partino.oraInizio}} ~ {{partino.oraFine}}
+                            </span>
+                          </div>
+                        </div>
                       </div>
                     </td>
                     <td
                       class="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-auto transition cursor-pointer duration-500 ease hover:bg-gray-300">
                       <div
-                        class="flex flex-col h-40 mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
-                        
-                        <div class="bottom flex-grow h-30 py-1 w-full cursor-pointer"></div>
+                        class="flex flex-col mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
+                        <!-- <div class="top h-5 w-full">
+                          <span class="text-gray-500">1</span>
+                        </div> -->
+                        <div *ngFor="let partino of partys" class="bottom flex-grow h-30 py-1 w-full cursor-pointer">
+                          <div *ngIf="partino.giorno == 'Mercoledì' " class="event bg-purple-400 text-white rounded p-1 text-sm mb-1">
+                            <span  class="event-name">
+                              {{partino.nomeSerata}}
+                            </span>
+                            <span class="time">
+                              {{partino.oraInizio}} ~ {{partino.oraFine}}
+                            </span>
+                          </div>
+                        </div>
                       </div>
                     </td>
                     <td
                       class="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-auto transition cursor-pointer duration-500 ease hover:bg-gray-300">
                       <div
-                        class="flex flex-col h-40 mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
-                        
-                        <div class="bottom flex-grow h-30 py-1 w-full cursor-pointer"></div>
+                        class="flex flex-col mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
+                        <!-- <div class="top h-5 w-full">
+                          <span class="text-gray-500">1</span>
+                        </div> -->
+                        <div *ngFor="let partino of partys" class="bottom flex-grow h-30 py-1 w-full cursor-pointer">
+                          <div *ngIf="partino.giorno == 'Giovedì' " class="event bg-purple-400 text-white rounded p-1 text-sm mb-1">
+                            <span  class="event-name">
+                              {{partino.nomeSerata}}
+                            </span>
+                            <span class="time">
+                              {{partino.oraInizio}} ~ {{partino.oraFine}}
+                            </span>
+                          </div>
+                        </div>
                       </div>
                     </td>
                     <td
                       class="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-auto transition cursor-pointer duration-500 ease hover:bg-gray-300">
                       <div
-                        class="flex flex-col h-40 mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
-                        
-                        <div class="bottom flex-grow h-30 py-1 w-full cursor-pointer"></div>
+                        class="flex flex-col mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
+                        <!-- <div class="top h-5 w-full">
+                          <span class="text-gray-500">1</span>
+                        </div> -->
+                        <div *ngFor="let partino of partys" class="bottom flex-grow h-30 py-1 w-full cursor-pointer">
+                          <div *ngIf="partino.giorno == 'Venerdì' " class="event bg-purple-400 text-white rounded p-1 text-sm mb-1">
+                            <span  class="event-name">
+                              {{partino.nomeSerata}}
+                            </span>
+                            <span class="time">
+                              {{partino.oraInizio}} ~ {{partino.oraFine}}
+                            </span>
+                          </div>
+                        </div>
                       </div>
                     </td>
                     <td
                       class="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-hidden transition cursor-pointer duration-500 ease hover:bg-gray-300">
                       <div
-                        class="flex flex-col h-40 mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
-                        
-                        <div class="bottom flex-grow h-30 py-1 w-full cursor-pointer">
-                          <div class="event bg-blue-400 text-white rounded p-1 text-sm mb-1">
-                            <span class="event-name">
-                              Shopping
+                        class="flex flex-col mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
+                        <!-- <div class="top h-5 w-full">
+                          <span class="text-gray-500">1</span>
+                        </div> -->
+                        <div *ngFor="let partino of partys" class="bottom flex-grow h-30 py-1 w-full cursor-pointer">
+                          <div *ngIf="partino.giorno == 'Sabato' " class="event bg-purple-400 text-white rounded p-1 text-sm mb-1">
+                            <span  class="event-name">
+                              {{partino.nomeSerata}}
                             </span>
                             <span class="time">
-                              12:00~14:00
+                              {{partino.oraInizio}} ~ {{partino.oraFine}}
                             </span>
                           </div>
                         </div>
@@ -693,9 +731,20 @@
                     <td
                       class="border p-1 h-40 xl:w-40 lg:w-30 md:w-30 sm:w-20 w-10 overflow-auto transition cursor-pointer duration-500 ease hover:bg-gray-300">
                       <div
-                        class="flex flex-col h-40 mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
-                        
-                        <div class="bottom flex-grow h-30 py-1 w-full cursor-pointer"></div>
+                        class="flex flex-col mx-auto xl:w-40 lg:w-30 md:w-30 sm:w-full w-10 mx-auto overflow-hidden">
+                        <!-- <div class="top h-5 w-full">
+                          <span class="text-gray-500">1</span>
+                        </div> -->
+                        <div *ngFor="let partino of partys" class="bottom flex-grow h-30 py-1 w-full cursor-pointer">
+                          <div *ngIf="partino.giorno == 'Domenica' " class="event bg-purple-400 text-white rounded p-1 text-sm mb-1">
+                            <span  class="event-name">
+                              {{partino.nomeSerata}}
+                            </span>
+                            <span class="time">
+                              {{partino.oraInizio}} ~ {{partino.oraFine}}
+                            </span>
+                          </div>
+                        </div>
                       </div>
                     </td>
                   </tr>

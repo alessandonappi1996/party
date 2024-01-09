@@ -9,13 +9,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrazioneComponent } from './pages/registrazione/registrazione.component';
 import { LoginComponent } from './pages/login/login.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PartyComponent,
 RegistrazioneComponent,
-LoginComponent
+LoginComponent,
+HeaderComponent
   ],
   imports: [
     BrowserModule,
