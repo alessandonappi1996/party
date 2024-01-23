@@ -30,7 +30,11 @@
           <a href="#" class="w3-bar-item w3-button">Media</a>
         </div>
       </div>
-      <a [routerLink]="['party/add-party']" class="w3-bar-item w3-button w3-padding-large w3-right">AGGIUNGI PARTY</a>
+      <a *ngIf="logged" [routerLink]="['party/add-party']" class="w3-bar-item w3-button w3-padding-large w3-right">AGGIUNGI PARTY</a>
+      <a *ngIf="logged" [routerLink]="['profilo']" class="w3-bar-item w3-button w3-padding-large w3-right"><i class="pi pi-user" style=""></i></a>
+      <a [routerLink]="['login']" class="w3-bar-item w3-button w3-padding-large w3-right"><i class="pi pi-sign-in" ></i></a>
+      <a [routerLink]="['registrazione']" class="w3-bar-item w3-button w3-padding-large w3-right"><i class="pi pi-user-plus" ></i></a>
+
       <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
           class="fa fa-search"></i></a>
     </div>

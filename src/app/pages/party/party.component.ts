@@ -12,6 +12,9 @@ export class PartyComponent {
 
   partys : any
   close : boolean = true
+  logged : boolean = false
+
+  public token =[1,2,3,4,5,6,7,8,9,10,'a','b','c']
 
   constructor(
     private router: Router,
@@ -22,7 +25,41 @@ export class PartyComponent {
 
 ngOnInit (): void {
 this.getParty()
+let admin = localStorage.getItem('seiAdminn')
+if(admin){
+  this.logged = true 
+  console.warn('funziona?????');
+  
 }
+// const random = Math.floor(Math.random() * this.token.length)
+// console.log(random , 'random' , this.token[random] ,'token random');
+this.shuffle()
+console.log(this.token);
+
+}
+
+shuffle() {
+  let currentIndex = this.token.length,  randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex > 0) {
+
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [this.token[currentIndex], this.token[randomIndex]] = [
+      this.token[randomIndex], this.token[currentIndex]];
+  }
+
+  // return this.token;
+}
+
+// Used like so
+// var arr = [2, 11, 37, 42];
+// shuffle(arr);
+// console.log(arr);
 
 
 arrProva : any = []

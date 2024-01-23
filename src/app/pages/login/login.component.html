@@ -1,1 +1,22 @@
-<p>login works!</p>
+<div class="login-box">
+    <p>Log in</p>
+    <form [formGroup]="form"   >
+      
+      <div class="user-box">
+        <input formControlName="email" required="" name="" type="email">
+        <label>Email</label>
+      </div>
+      <div class="user-box">
+        <input formControlName="password" required="" name="" type="password">
+        <label>Password</label>
+      </div>
+      <button (click)="logga()" type="submit" >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </button>
+    </form>
+    <p>Non hai un account? <a [routerLink]="'/registrazione'" class="a2" style="text-decoration: underline;">Registrati!</a></p>
+  </div>

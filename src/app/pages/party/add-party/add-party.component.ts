@@ -14,6 +14,7 @@ import Swal from 'sweetalert2'
 export class AddPartyComponent {
 
   form!: FormGroup;
+  logged:boolean= false
 public settimana = [
   {
 giornoS : 'Lunedì'
@@ -48,6 +49,11 @@ private fireBaseSrv : PartyService
 
 
 ngOnInit (): void{
+
+let admin = localStorage.getItem('seiAdminn')
+if(admin){
+  this.logged = true
+}
 this.form = this.fb.group ({
   nomeSerata: [''] , 
   oraInizio : [''],

@@ -4,6 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { PartyComponent } from './party.component';
 import { AddPartyComponent } from './add-party/add-party.component';
 import { EditPartyComponent } from './edit-party/edit-party.component';
+import { RegistrazioneComponent } from '../registrazione/registrazione.component';
+import { ProfiloComponent } from '../profilo/profilo.component';
+import { LoginComponent } from '../login/login.component';
 // import { EditPartyComponent } from './edit-party/edit-party.component';
 const routes : Routes = [
 
@@ -42,6 +45,10 @@ const routes : Routes = [
           //   role:['USER_ADMIN', 'superuser'],
           }
         },
+
+        { path: 'registrazione' , component: RegistrazioneComponent},
+        { path: 'profilo' , component: ProfiloComponent},
+        { path: 'login' , component: LoginComponent }
 
         // {
         //   path:'edit-party/:id',

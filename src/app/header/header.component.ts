@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  logged : boolean = false
+
+  constructor(){}
+
+  ngOnInit (): void {
+    let admin = localStorage.getItem('seiAdminn')
+    console.log(admin);
+    
+    if(admin){
+      
+      this.logged = true
+    }
+  }
 }

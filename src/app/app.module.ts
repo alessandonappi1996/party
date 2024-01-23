@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrazioneComponent } from './pages/registrazione/registrazione.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HeaderComponent } from './header/header.component';
+import { ProfiloComponent } from './pages/profilo/profilo.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +18,16 @@ import { HeaderComponent } from './header/header.component';
     PartyComponent,
 RegistrazioneComponent,
 LoginComponent,
-HeaderComponent
+HeaderComponent,
+ProfiloComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

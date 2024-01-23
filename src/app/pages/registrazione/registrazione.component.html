@@ -2,10 +2,18 @@
 
 
 <div class="login-box">
-    <p>Login</p>
+    <p>Registrazione</p>
     <form [formGroup]="form" (ngSubmit)="registra()" >
       <div class="user-box">
-        <input formControlName="email" required="" name="" type="text">
+        <input formControlName="nome" required="" name="" type="text">
+        <label>Nome</label>
+      </div>
+      <div class="user-box">
+        <input formControlName="cognome" required="" name="" type="text">
+        <label>Cognome</label>
+      </div>
+      <div class="user-box">
+        <input formControlName="email" required="" name="" type="email">
         <label>Email</label>
       </div>
       <div class="user-box">

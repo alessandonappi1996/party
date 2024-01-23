@@ -30,7 +30,10 @@
           <a href="#" class="w3-bar-item w3-button">Media</a>
         </div>
       </div>
-      <a [routerLink]="['add-party']" class="w3-bar-item w3-button w3-padding-large w3-right">AGGIUNGI PARTY</a>
+      <a *ngIf="logged" [routerLink]="['add-party']" class="w3-bar-item w3-button w3-padding-large w3-right">AGGIUNGI PARTY</a>
+      <a *ngIf="logged" [routerLink]="['profilo']" class="w3-bar-item w3-button w3-padding-large w3-right"><i class="pi pi-user" style=""></i></a>
+      <a [routerLink]="['login']" class="w3-bar-item w3-button w3-padding-large w3-right"><i class="pi pi-sign-in" ></i></a>        
+      <a [routerLink]="['registrazione']" class="w3-bar-item w3-button w3-padding-large w3-right"><i class="pi pi-user-plus" ></i></a>
       <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
           class="fa fa-search"></i></a>
     </div>
@@ -622,7 +625,7 @@
                           <span class="text-gray-500">1</span>
                         </div> -->
                         <div *ngFor="let partino of partys" class="bottom flex-grow h-30 py-1 w-full cursor-pointer">
-                          <div *ngIf="partino.giorno == 'Lunedì' " class="event bg-purple-400 text-white rounded p-1 text-sm mb-1">
+                          <div *ngIf="partino.giorno == 'Lunedì' " class="event bg-red-400 text-white rounded p-1 text-sm mb-1">
                             <span  class="event-name">
                               {{partino.nomeSerata}}
                             </span>
@@ -641,7 +644,7 @@
                           <span class="text-gray-500">1</span>
                         </div> -->
                         <div *ngFor="let partino of partys" class="bottom flex-grow h-30 py-1 w-full cursor-pointer">
-                          <div *ngIf="partino.giorno == 'Martedì' " class="event bg-purple-400 text-white rounded p-1 text-sm mb-1">
+                          <div *ngIf="partino.giorno == 'Martedì' " class="event bg-green-400 text-white rounded p-1 text-sm mb-1">
                             <span  class="event-name">
                               {{partino.nomeSerata}}
                             </span>
@@ -660,7 +663,7 @@
                           <span class="text-gray-500">1</span>
                         </div> -->
                         <div *ngFor="let partino of partys" class="bottom flex-grow h-30 py-1 w-full cursor-pointer">
-                          <div *ngIf="partino.giorno == 'Mercoledì' " class="event bg-purple-400 text-white rounded p-1 text-sm mb-1">
+                          <div *ngIf="partino.giorno == 'Mercoledì' " class="event bg-blue-400 text-white rounded p-1 text-sm mb-1" >
                             <span  class="event-name">
                               {{partino.nomeSerata}}
                             </span>
@@ -679,7 +682,7 @@
                           <span class="text-gray-500">1</span>
                         </div> -->
                         <div *ngFor="let partino of partys" class="bottom flex-grow h-30 py-1 w-full cursor-pointer">
-                          <div *ngIf="partino.giorno == 'Giovedì' " class="event bg-purple-400 text-white rounded p-1 text-sm mb-1">
+                          <div *ngIf="partino.giorno == 'Giovedì' " class="event bg-yellow-400 text-white rounded p-1 text-sm mb-1">
                             <span  class="event-name">
                               {{partino.nomeSerata}}
                             </span>
@@ -698,7 +701,7 @@
                           <span class="text-gray-500">1</span>
                         </div> -->
                         <div *ngFor="let partino of partys" class="bottom flex-grow h-30 py-1 w-full cursor-pointer">
-                          <div *ngIf="partino.giorno == 'Venerdì' " class="event bg-purple-400 text-white rounded p-1 text-sm mb-1">
+                          <div *ngIf="partino.giorno == 'Venerdì' " class="event bg-teal-400 text-white rounded p-1 text-sm mb-1">
                             <span  class="event-name">
                               {{partino.nomeSerata}}
                             </span>
